@@ -29,7 +29,7 @@ CVAlign is a web app that helps recruiters, hiring managers, and admins evaluate
 
 ### 1. Clone the repository
 
-git clone https://github.com/yourusername/cvalign.git
+git clone https://github.com/jadenmoncy/CVAlign.git
 cd cvalign
 
 ### 2. Backend Setup
@@ -62,7 +62,7 @@ ollama run mistral
 uvicorn app.main:app --reload
 
 ### Train the Relevance Model (before first run)
-Run the following command to train the DistilBERT relevance model and save it to `cv_classifier/models/classifier.pt`:
+Run the following command to train the DistilBERT relevance model and save it to "cv_classifier/models/classifier.pt":
 
 python cv_classifier/train.py
 
