@@ -79,7 +79,7 @@ Uses LangChain RAG pipeline to generate strengths, weaknesses, and a fit summary
 
 
 ### Folder Structure
-
+```
 cvalign/
 │
 ├── app/
@@ -94,6 +94,7 @@ cvalign/
 ├── rag/vectorstore/  # FAISS index files
 ├── cv-align-frontend/
 │   └── src/          # React app
+```
 
 
 
