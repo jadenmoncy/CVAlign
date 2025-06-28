@@ -28,50 +28,63 @@ CVAlign is a web app that helps recruiters, hiring managers, and admins evaluate
 ## Working
 
 ### 1. Clone the repository
+```
 
 git clone https://github.com/jadenmoncy/CVAlign.git
 cd cvalign
+```
 
 ### 2. Backend Setup
-
+```
 cd cvalign
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 
 pip install -r requirements.txt
+```
 
 
 ### 3. Set up .env
 Create a .env file with the following:
+```
 
 CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
+```
 
 
 ### 4. Initialize DB
+```
 
 python app/init_db.py
+```
 
 ### 5. Start Ollama (if not already running)
+```
 
 ollama run mistral
+```
 
 ### 6. Run Backend
-
+```
 uvicorn app.main:app --reload
+```
 
 ### Train the Relevance Model (before first run)
 Run the following command to train the DistilBERT relevance model and save it to "cv_classifier/models/classifier.pt":
+```
 
 python cv_classifier/train.py
+```
 
 
 ### 7. Frontend Setup
-
+```
 cd cv-align-frontend
 npm install
 npm start
+```
 
 ### Notes
 Uploaded CVs are scored, stored on Cloudinary, and feedback is generated.
